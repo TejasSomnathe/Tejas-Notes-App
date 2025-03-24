@@ -2,10 +2,9 @@ import { useState , useEffect} from "react"
 import {useDispatch} from 'react-redux'
 import authService, { AuthService } from './appwrite/auth.js'
 import{login, logout} from './store/authSlice';
-
-// import { Header } from "./components/Header/Header.jsx";
-
-// import Footer from "./components/Footer/Footer.jsx";
+import './index.css'
+import { Header } from "./components/Header/Header.jsx";
+import {Footer} from "./components/Footer/Footer.jsx";
 
 import './components/index.js'
 import { Outlet } from "react-router-dom";
@@ -28,9 +27,10 @@ function App() {
   },[])
   
 return!loading ? (
-  <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
-    <div className="w-full block">
+  <div>
+    <div>
       <Header />
+      
       <main>
         {/* <Outlet /> */}
       </main>
